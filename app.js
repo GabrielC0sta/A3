@@ -8,45 +8,57 @@ nextDom.onclick = function(){
     showSlider('next');
 }
 
-prevDom.onclick=function(){
-    showSlider('prev')
+prevDom.onclick = function(){
+    showSlider('prev');
 }
 
-
-
-
-let timeRunning= 3000;
-let timeAutoNext= 7000;
+let timeRunning = 3000;
+let timeAutoNext = 7000;
 let ranTimeOut;
-let ranautoRan = ranTimeOut = setTimeout(()=>{
-        nextDom.click();
-    },timeAutoNext);
+let ranautoRan = ranTimeOut = setTimeout(() => {
+    nextDom.click();
+}, timeAutoNext);
 
 function showSlider(type){
     let itemSlider = document.querySelectorAll('.carousel .list .item');
     let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item');
 
-   if (type === 'next') {
-    listItemDom.appendChild(itemSlider[0]);
-    thumbnailDom.appendChild(itemThumbnail[0]);
-    carouselDom.classList.add('next'); // Corrigido aqui
-}else{
-    let positionLastItem = itemSlider.length -1;
-    listItemDom.prepend(itemSlider[positionLastItem])
-    thumbnailDom.prepend(itemThumbnail[positionLastItem])
-    carouselDom.classList.add('prev')
-    
-}
-    classTiemout(ranTimeOut);
-        timeTimeOut = setTimeout(()=>{
-            carouselDom.classList.remove('next');
-            carouselDom.classList.remove('prev');
+    if (type === 'next') {
+        listItemDom.appendChild(itemSlider[0]);
+        thumbnailDom.appendChild(itemThumbnail[0]);
+        carouselDom.classList.add('next');
+    } else {
+        let positionLastItem = itemSlider.length - 1;
+        listItemDom.prepend(itemSlider[positionLastItem]);
+        thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+        carouselDom.classList.add('prev');
+    }
 
-        },timeRunning)
-    
-    claerTiemout(ranautoRan);
-    ranTimeOut = setTimeout(()=>{
+    clearTimeout(ranTimeOut);
+    ranTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+    }, timeRunning);
+
+    clearTimeout(ranautoRan);
+    ranautoRan = setTimeout(() => {
         nextDom.click();
-    },timeAutoNext)
-   
+    }, timeAutoNext);
+
+    updateTopicColorByItem(); // 👈 Atualiza a cor da .topic
 }
+
+// ✅ Função que define a cor com base no atributo data-color do item visível
+function updateTopicColorByItem() {
+    const items = document.querySelectorAll('.carousel .list .item');
+    const currentItem = items[0]; // o item ativo é sempre o primeiro
+    const topic = currentItem.querySelector('.topic');
+    const color = topic?.getAttribute('data-color'); 
+
+    if (topic && color) {
+        topic.style.color = color;
+    }
+}
+
+// Chamar uma vez ao carregar a página
+updateTopicColorByItem();

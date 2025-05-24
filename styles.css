@@ -80,9 +80,7 @@ header a{
 }
 
 
-.carousel .list .item .content .topic{
-    color:#f1683a;
-}
+
 
 .carousel .list .item .content .buttons {
    display: grid;
@@ -317,11 +315,12 @@ header a{
 .time {
     width: 0%;
     height: 3px;
-    background-color: #f1683a;
+    background-color: #fcfcfc;
     position: absolute;
     z-index: 100;
     top: 0;
     left: 0;
+    opacity: 0.4;
 }
 
 .carousel.prev .time,
