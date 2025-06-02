@@ -45,13 +45,13 @@ function showSlider(type){
         nextDom.click();
     }, timeAutoNext);
 
-    updateTopicColorByItem(); // 👈 Atualiza a cor da .topic
+    updateTopicColorByItem(); 
 }
 
-// ✅ Função que define a cor com base no atributo data-color do item visível
+
 function updateTopicColorByItem() {
     const items = document.querySelectorAll('.carousel .list .item');
-    const currentItem = items[0]; // o item ativo é sempre o primeiro
+    const currentItem = items[0];
     const topic = currentItem.querySelector('.topic');
     const color = topic?.getAttribute('data-color'); 
 
@@ -60,5 +60,5 @@ function updateTopicColorByItem() {
     }
 }
 
-// Chamar uma vez ao carregar a página
+
 updateTopicColorByItem();

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODS Player</title>
+  <link rel="stylesheet" href="video-style.css">
+</head>
+<body>
+
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="#">Contatos</a>
+    <a href="#">Info</a>
+  </nav>
+
+  <div class="video-container">
+    <div class="header">
+      <div class="badge yellow">YouTube</div>
+      <div class="badge">HD</div>
+    </div>
+
+    <div class="player-area">
+      <div id="player"></div>
+    </div>
+
+    <div class="info">
+      <div>
+        <h3 id="video-title">Meu Vídeo Incrível</h3>
+        <div id="video-time">00:00 / 00:00</div>
+      </div>
+      <div class="volume-control">
+        🔊 <input type="range" min="0" max="100" value="50" id="volumeRange">
+      </div>
+    </div>
+
+    <div class="progress" onclick="seekVideo(event)">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <button class="restart-button" onclick="restartVideo()">Assistir Novamente 🔁</button>
+
+    <div class="yt-link">
+      <a id="yt-link" href="#" target="_blank">Abrir no YouTube 🔗</a>
+    </div>
+  </div>
+
+  <script src="video-script.js"></script>
+</body>
+</html>

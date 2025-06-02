@@ -1,0 +1,206 @@
+:root {
+  --main-color: #e5ff00; /* Cor inicial, será atualizada dinamicamente pelo JS */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: 600% 600%;
+  animation: gradientBG 19s ease infinite, zoomIn 1s ease forwards;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 80% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  gap: 30px;
+  z-index: 100;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--main-color);
+}
+
+.video-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.badge {
+  background: #000;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.badge.yellow {
+  background: var(--main-color);
+  color: #111;
+}
+
+.player-area {
+  width: 100%;
+  height: 450px;
+  background: black;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 15px 20px;
+  background: #222;
+}
+
+.info h3 {
+  margin-bottom: 4px;
+}
+
+.progress {
+  background: #333;
+  height: 6px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+}
+
+.progress-bar {
+  background: var(--main-color);
+  height: 100%;
+  width: 0%;
+  border-radius: 50px;
+  transition: width 0.2s linear;
+}
+
+.restart-button {
+  width: 100%;
+  padding: 12px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 0 0 20px 20px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+
+.restart-button:hover {
+  background: #ffff00;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-control input[type="range"] {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
+  background: #444;
+  border-radius: 50px;
+  outline: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--main-color);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ffff00;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+  background: var(--main-color);
+}
+
+.volume-control input[type="range"]::-ms-thumb {
+  background: var(--main-color);
+}
+
+.yt-link {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.yt-link a {
+  color: white;
+  text-decoration: none;
+  background: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.yt-link a:hover {
+  background: var(--main-color);
+  color: #111;
+}

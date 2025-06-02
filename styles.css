@@ -310,12 +310,13 @@ header a{
 .carousel.next .arrows .button,
 .carousel.prev .arrows .button{
     pointer-events: none;
+    background-color: #fcfcfc;
 }
 
 .time {
     width: 0%;
     height: 3px;
-    background-color: #fcfcfc;
+    background-color: #ececec86;
     position: absolute;
     z-index: 100;
     top: 0;
