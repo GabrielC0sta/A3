@@ -23,6 +23,10 @@ function showSlider(type){
     let itemSlider = document.querySelectorAll('.carousel .list .item');
     let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item');
 
+    // Remove classes de animação e força reflow
+    carouselDom.classList.remove('next', 'prev');
+    void carouselDom.offsetWidth; // força o reflow
+
     if (type === 'next') {
         listItemDom.appendChild(itemSlider[0]);
         thumbnailDom.appendChild(itemThumbnail[0]);
@@ -36,8 +40,7 @@ function showSlider(type){
 
     clearTimeout(ranTimeOut);
     ranTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
+        carouselDom.classList.remove('next', 'prev');
     }, timeRunning);
 
     clearTimeout(ranautoRan);
@@ -47,7 +50,6 @@ function showSlider(type){
 
     updateTopicColorByItem(); 
 }
-
 
 function updateTopicColorByItem() {
     const items = document.querySelectorAll('.carousel .list .item');
@@ -59,6 +61,5 @@ function updateTopicColorByItem() {
         topic.style.color = color;
     }
 }
-
 
 updateTopicColorByItem();
