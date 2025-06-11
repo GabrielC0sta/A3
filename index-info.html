@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre o Projeto</title>
+  <link rel="stylesheet" href="style-info.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="index-contacts.html">contacts</a>
+      <a href="info.html">info</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h1 class="rainbow-text">Sobre o Projeto</h1>
+    <p>Este projeto foi criado com o objetivo de <span class="highlight">informar de forma moderna e interativa sobre os 17 Objetivos de Desenvolvimento Sustentável (ODS)</span> da ONU. A proposta une tecnologia, design atrativo e conteúdo educacional em uma experiência acessível e envolvente.</p>
+  </div>
+
+  <div class="section">
+    <h2>1. Motivação e Criação</h2>
+    <p>Desde o início, a ideia era fugir do comum. Em vez de uma apresentação estática, optamos por um site dinâmico e atrativo que <span class="highlight">educasse ao mesmo tempo que impressionasse visualmente</span>.</p>
+    <p>Todo o layout foi desenvolvido com atenção aos detalhes: cores vivas, animações suaves, responsividade total e uso inteligente de multimídia. O desenvolvimento envolveu:</p>
+    <ul>
+      <li>Planejamento da navegação e fluxos entre as páginas</li>
+      <li>Desenho de uma identidade visual futurista com gradientes e neons</li>
+      <li>Construção modular e reutilizável dos estilos e scripts</li>
+      <li>Testes de responsividade e performance</li>
+    </ul>
+    <p>Trabalhamos diretamente com HTML, CSS e JavaScript puros, sem uso de bibliotecas externas além da <code>YouTube IFrame API</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Página Inicial (<code>index.html</code>)</h2>
+    <p>Apresenta um <strong>carrossel customizado</strong> onde cada slide representa um ODS. Cada item inclui:</p>
+    <ul>
+      <li>Imagem ilustrativa</li>
+      <li>Título e subtítulo com cores específicas via <code>data-color</code></li>
+      <li>Texto descritivo</li>
+      <li>Botões de navegação para vídeos e fontes externas</li>
+    </ul>
+    <p>O carrossel é controlado com lógica em <code>app.js</code>, onde cada clique manipula diretamente o DOM com <code>appendChild</code> e <code>prepend</code>. As transições são controladas por animações CSS.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Player de Vídeo Interativo (<code>video-index.html</code>)</h2>
+    <p>Essa página carrega um vídeo específico para cada ODS, controlado por parâmetros na URL (ex: <code>?ods=3</code>). O script <code>video-script.js</code>:</p>
+    <ul>
+      <li>Busca o ODS na URL</li>
+      <li>Aplica cor e gradiente únicos na interface</li>
+      <li>Carrega automaticamente o vídeo correto do YouTube</li>
+      <li>Gerencia volume, reinício do vídeo e estilo dos botões</li>
+    </ul>
+    <p>Toda a paleta visual muda com base no ODS ativo. A interface é moderna, com botões acessíveis, barra de progresso personalizada e integração visual completa.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Estilo e Visual</h2>
+    <p>Utilizamos três arquivos de estilo:</p>
+    <ul>
+      <li><code>styles.css</code>: define layout da home, carrossel, botões e efeitos</li>
+      <li><code>video-style.css</code>: animações de fundo, cores, player</li>
+      <li><code>style-contacts.css</code>: aparência cyber, efeitos 3D e blur</li>
+    </ul>
+    <p>As fontes são da família <code>Poppins</code>, garantindo uma leitura agradável e moderna.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Funcionalidades Especiais</h2>
+    <ul>
+      <li><strong>Transições suaves:</strong> animações com keyframes CSS</li>
+      <li><strong>Responsividade:</strong> adaptado a todos os tamanhos de tela</li>
+      <li><strong>Gradientes dinâmicos:</strong> diferentes por ODS</li>
+      <li><strong>Atualização visual via JS:</strong> sem reload da página</li>
+      <li><strong>Link dinâmico para YouTube</strong> no botão “Abrir no YouTube”</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Conclusão</h2>
+    <p>O projeto atinge seu objetivo de maneira criativa e eficaz. Usar tecnologia e design para falar sobre os ODS é uma forma de <span class="highlight">transformar educação em experiência</span>. Esperamos que este site inspire e informe quem o acessa, cumprindo o papel de formar uma sociedade mais consciente e sustentável.</p>
+  </div>
+
+</body>
+</html>

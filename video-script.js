@@ -12,7 +12,7 @@ let player;
 // ✅ 🔥 Banco de dados dos ODS
 const odsData = {
   "1": {
-    videoId: "y0md8kdFgx0",
+    videoId: "wLP6roH0XvU",
     title: "Erradicação da Pobreza",
     gradient: "linear-gradient(270deg, #fd0000, #333, #111)",
     color: "#fd0000"

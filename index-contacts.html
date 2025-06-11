@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equipe</title>
+  <link rel="stylesheet" href="style-contacts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="">contacts</a>
+      <a href="index-info.html">info</a>
+    </nav>
+  </header>
+
+  <div class="team-container">
+    <div class="card">
+      <img src="img/thiago.png" alt="Thiago Duarte Reis" class="avatar" />
+      <h3>Thiago Duarte Reis</h3>
+      <p class="role">RA: 822141527</p>
+      <div class="socials">
+        <a href="https://github.com/thiagoreisdev" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/thiago-reis-5a8b39354" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/thiagoreis.d/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/julia.jpeg" alt="Júlia Silva Pereira" class="avatar" />
+      <h3>Júlia Silva Pereira</h3>
+      <p class="role">RA: 823214064</p>
+      <div class="socials">
+        <a href="https://github.com/Juliasylva" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/j%C3%BAlia-silva-pereira-317712233" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/julliasilvaz" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/vitor.jpeg" alt="Vitor de Sousa" class="avatar" />
+      <h3>Vitor de Sousa</h3>
+      <p class="role">RA: 8222240199</p>
+      <div class="socials">
+        <a href="https://github.com/VitorRoyal" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vitor-de-souza/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/vitoroyal/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/gabriel.jpeg" alt="Gabriel Rodrigues da Silva Costa" class="avatar" />
+      <h3>Gabriel Rodrigues da Silva Costa</h3>
+      <p class="role">RA: 822137024</p>
+      <div class="socials">
+        <a href="https://github.com/GabrielC0sta" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gabriel-rodrigues-da-silva-costa-83a507265/" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/gabriellrodrgs_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/Jonata.jpg" alt="Jonata Pablo Garcia" class="avatar" />
+      <h3>Jonata Pablo Garcia</h3>
+      <p class="role">RA: 822127136</p>
+      <div class="socials">
+        <a href="https://github.com/Jonata-Garcia" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jonata-pablo-garcia" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/jon.garciaa" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/lucas.jpeg" alt="Lucas Ribeiro Pedroso" class="avatar" />
+      <h3>Lucas Ribeiro Pedroso</h3>
+      <p class="role">RA: 823149292</p>
+      <div class="socials">
+        <a href="https://github.com/LucasrPedroso" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lucas-pedroso-a66a3b238" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/lucas_pedrosox/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/peres.jpeg" alt="Fabrício Peres dos Santos" class="avatar" />
+      <h3>Fabrício Peres dos Santos</h3>
+      <p class="role">RA: 822160071</p>
+      <div class="socials">
+        <a href="https://github.com/DevPeress" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/devperes" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/fah.peres/profilecard/?igsh=djhvMmQyNjJjNG9n" target="_blank"><i
+            class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Rotação 3D nos cards ao mover mouse
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = -(y - centerY) / 15;
+        const rotateY = (x - centerX) / 15;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+
+    // Scroll horizontal por arrastar na div .team-container
+    const container = document.querySelector('.team-container');
+    if (container) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        container.classList.add('dragging');
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      });
+      container.addEventListener('mouseleave', () => {
+        isDown = false;
+        container.classList.remove('dragging');
+      });
+      container.addEventListener('mouseup', () => {
+        isDown = false;
+        container.classList.remove('dragging');
+      });
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        // Diminua o fator de velocidade (quanto maior o divisor, mais lenta a rolagem)
+        const walk = (x - startX) / 1; // 3 = mais lento, 2 = padrão, 1 = rápido
+        container.scrollLeft = scrollLeft - walk;
+      });
+    }
+  </script>
+</body>
+
+</html>

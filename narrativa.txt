@@ -1,0 +1,54 @@
+Você já parou pra pensar que...
+mesmo com tanta informação disponível hoje...
+a MAIORIA das pessoas ainda não sabe o que são os ODS da ONU?
+
+Sim.
+Os Objetivos de Desenvolvimento Sustentável...
+que definem o futuro do nosso planeta até 2030...
+ainda passam despercebidos por grande parte da população.
+Principalmente entre os jovens.
+
+E foi exatamente por isso que criamos o nosso software.
+
+Uma ferramenta de apresentação interativa,
+moderna, acessível,
+e totalmente voltada para educação com propósito.
+
+Muito mais do que um site...
+é uma experiência digital que transforma conhecimento em engajamento real.
+
+Cada um dos 17 ODS ganha vida com visual próprio,
+vídeos temáticos,
+e uma navegação fluida e dinâmica.
+
+Desenvolvemos tudo com HTML, CSS e JavaScript puro.
+Sem frameworks pesados.
+Totalmente responsivo.
+Compatível com qualquer tela.
+
+A interface é impactante:
+gradientes dinâmicos, cores vibrantes,
+animações suaves...
+e transições pensadas para prender a atenção.
+
+O player de vídeo interativo muda com cada ODS.
+Cores, estilos e comportamento se adaptam em tempo real...
+criando uma experiência de imersão total.
+
+Nosso objetivo?
+Conectar tecnologia com propósito.
+Educar de forma moderna.
+E tornar o conteúdo sobre sustentabilidade...
+algo atrativo, compreensível... e memorável.
+
+É ideal para escolas, ONGs, secretarias de educação, eventos...
+e empresas com foco em ESG.
+
+Quer educar com impacto?
+Quer falar sobre os ODS de uma forma envolvente e inesquecível?
+
+Então...
+este é o software que você estava procurando.
+
+Vamos juntos transformar informação em ação
+e formar uma geração mais consciente, crítica... e preparada para o futuro.
